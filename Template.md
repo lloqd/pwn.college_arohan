@@ -8,5 +8,5 @@
 ## Flag
 
 ### Resources
-- link (https://google.com)
+- [link](https://google.com)
 ### Notes
