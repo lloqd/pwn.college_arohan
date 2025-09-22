@@ -1,10 +1,12 @@
-# Challenge 3: Command History
+# Challenge
 
 ## Solution
 
 ```
-hacker@hello~command-history:~$ the flag is pwn.college{oxdESMCznIwjGGAxKJpfTsRHynB.0lNzEzNxwiMwAzNzEzW}
 ```
 
 ## Flag
-`pwn.college{oxdESMCznIwjGGAxKJpfTsRHynB.0lNzEzNxwiMwAzNzEzW}`
+
+### Resources
+- link (https://google.com)
+### Notes
