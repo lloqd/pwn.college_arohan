@@ -2,7 +2,7 @@
 Utilizing the arrow keys to go through command history
 
 ## Solution
-Press the up arrow key to go through previously executed commands
+Press the `up` arrow key to go through previously executed commands
 ```
 hacker@hello~command-history:~$ the flag is pwn.college{oxdESMCznIwjGGAxKJpfTsRHynB.0lNzEzNxwiMwAzNzEzW}
 ```
