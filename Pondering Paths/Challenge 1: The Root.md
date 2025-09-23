@@ -1,13 +1,10 @@
 # Challenge 1: The Root
-Invoking a program using it's path on the CLI
+Invoking a program using its _absolute_ path
 
 ## Solution
-Navigate to the `root` directory using the `cd` command and execute the `pwn` program
+Invoke `pwn` using its _absolute_ path, i.e. `/pwn`
 ```
-hacker@paths~the-root:~$ cd /
-hacker@paths~the-root:/$ ls -a
-.  ..  .dockerenv  bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  pwn  root  run  sbin  srv  sys  tmp  usr  var
-hacker@paths~the-root:/$ /pwn
+hacker@paths~the-root:~$ /pwn
 BOOM!!!
 Here is your flag:
 pwn.college{QEkcL9fEO52mHR0jUPENJIBi-RP.QX4cTO0wiMwAzNzEzW}
@@ -15,3 +12,7 @@ pwn.college{QEkcL9fEO52mHR0jUPENJIBi-RP.QX4cTO0wiMwAzNzEzW}
 
 ## Flag
 `pwn.college{QEkcL9fEO52mHR0jUPENJIBi-RP.QX4cTO0wiMwAzNzEzW}`
+
+### Notes
+- learnt about `/` or the `root` directory, the starting point of the Linux filesystem
+- learnt about the _absolute_ path, i.e. the path to a file/directory that gives its exact path from the `root` directory

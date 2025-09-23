@@ -1,5 +1,5 @@
 # Challenge 3: Position thy self
-Changing the current working directory of the process and invoking a program
+Changing the _current working directory_ of the shell and invoking a program from a specified directory
 ## Solution
 Navigate to the `/var` directory as instructed by the program and then invoke `run` using `/challenge/run`
 ```
@@ -17,3 +17,7 @@ pwn.college{YIxAuriRu3ZJPuON44cRGMB2z3w.QX2QTN0wiMwAzNzEzW}
 
 ## Flag
 `pwn.college{YIxAuriRu3ZJPuON44cRGMB2z3w.QX2QTN0wiMwAzNzEzW}`
+
+### Notes
+- learnt about `cd` or the **c**hange **d**irectory command, which changes the **c**urrent **w**orking **d**irectory (`cwd`) of the process (usually the shell)
+- learnt about `~`, which represents the current path of the shell

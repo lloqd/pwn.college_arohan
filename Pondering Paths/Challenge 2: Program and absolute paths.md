@@ -1,7 +1,7 @@
 # Challenge 2: Program and absolute paths
-Invoke a program in a specific directory using its absolute path
+Invoking a program in a specific directory using its _absolute_ path
 ## Solution
-Execute the `run` file using it's absolute path, i.e. `/challenge/run`
+Invoke `run` using its _absolute_ path, i.e. `/challenge/run`
 ```
 hacker@paths~program-and-absolute-paths:~$ /challenge/run
 Correct!!!

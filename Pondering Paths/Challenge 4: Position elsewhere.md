@@ -1,5 +1,5 @@
 # Challenge 4: Position elsewhere
-Changing the current working directory of the process and invoking a program
+Changing the _current working directory_ of the shell and invoking a program from a specified directory
 ## Solution
 Navigate to the `/sys/kernel` directory as instructed by the program and then invoke `run` using `/challenge/run`
 ```
@@ -17,3 +17,6 @@ pwn.college{YVLfgnPQDlvo_9ZsN3qrlSI8gbl.QX3QTN0wiMwAzNzEzW}
 
 ## Flag
 `pwn.college{YVLfgnPQDlvo_9ZsN3qrlSI8gbl.QX3QTN0wiMwAzNzEzW}`
+
+### Notes
+- same as Challenge 3: _Position thy self_
