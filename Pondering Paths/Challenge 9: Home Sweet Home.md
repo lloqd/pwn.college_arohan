@@ -4,7 +4,7 @@ Invoke the `run` program which writes a copy of the flag to a file that the user
 2. The path must be inside your `home` directory. <br>
 3. Before expansion, your argument must be **three characters or less**.
 
-## Ssolution
+## Solution
 Based on the constraints for the argument, we can use `~` to represent the `home` directory, and use a file name that's one character long to satisfy the **three characters or less** requirement, hence the path is `~/f`
 ```
 hacker@paths~home-sweet-home:~$ /challenge/run ~/f

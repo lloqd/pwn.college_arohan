@@ -2,7 +2,7 @@
 Invoking commands
 
 ## Solution
-Run the `hello` command after connecting to `pwn.college` through SSH
+Invoke the `hello` command after connecting to `pwn.college` through SSH
 
 ```
 hacker@hello~intro-to-commands:~$ hello

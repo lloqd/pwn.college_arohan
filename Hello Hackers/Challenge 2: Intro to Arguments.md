@@ -2,7 +2,7 @@
 Suffixing commands with arguments
 
 ## Solution
-Run the `hello` command with `hackers` as an argument
+Invoke the `hello` command with `hackers` as an argument
  
 ```
 hacker@hello~intro-to-arguments:~$ hello hackers
