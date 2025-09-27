@@ -1,5 +1,5 @@
 # Challenge 7: Help for Builtins
-Using the _shell_ builtin `help` to get documentation for other _shell_ builtins
+Using the shell builtin `help` to get documentation for other shell builtins
 ## Solution
 Invoke `help` with `challenge` as an argument
 ```
