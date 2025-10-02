@@ -1,5 +1,5 @@
 # Challenge 2: Redirecting more output
-
+Using `>` to redirect the `stdout` of a command
 ## Solution
 Invoke `/challenge/run` and redirect its `stdout` to `myflag`
 ```
@@ -18,7 +18,7 @@ hacker@piping~redirecting-more-output:~$ /challenge/run > myflag
 [PASS] The file at the other end of my stdout looks okay!
 [PASS] Success! You have satisfied all execution requirements.
 ```
-Now, `cat` the `./myflag` file
+The output we saw was communicated over `stderr`, to look at the command's `stdout`, wwe `cat` the `./myflag` file
 ```
 hacker@piping~redirecting-more-output:~$ cat ./myflag
 
@@ -28,5 +28,3 @@ hacker@piping~redirecting-more-output:~$ cat ./myflag
 
 ## Flag
 `pwn.college{g6mxXaE2mQZm2zHRUHgbsgUfw3Q.QX1YTN0wiMwAzNzEzW}`
-### Notes
--

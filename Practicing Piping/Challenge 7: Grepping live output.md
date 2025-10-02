@@ -1,7 +1,7 @@
 # Challenge 7: Grepping live output
-
+Using `grep` to search through the output of a program using the `|` operator
 ## Solution
-
+Invoke `/challenge/run` and using the `|` operator, _pipe_ its output to the `grep` command on the right side
 ```
 hacker@piping~grepping-live-output:~$ /challenge/run | grep pwn.college
 [INFO] WELCOME! This challenge makes the following asks of you:
@@ -16,7 +16,7 @@ hacker@piping~grepping-live-output:~$ /challenge/run | grep pwn.college
 [TEST] You should have redirected my stdout to another process. Checking...
 [TEST] Performing checks on that process!
 
-[INFO] The process' executable is /nix/store/8b4vn1iyn6kqiisjvlmv67d1c0p3j6wj-gnugrep-3.11/bin/grep.
+[INFO] The process' executable is /nix/store/8b4vn1iyn6kqiisjvlmv67d1c0p3j6wj-gnugrep-3.11/bin/grep.vv
 [INFO] This might be different than expected because of symbolic links (for example, from /usr/bin/python to /usr/bin/python3 to /usr/bin/python3.8).
 [INFO] To pass the checks, the executable must be grep.
 
@@ -27,7 +27,5 @@ pwn.college{IIBaMLBJIRYo1BdQLpKyLw17P7z.QX5EDO0wiMwAzNzEzW}
 
 ## Flag
 `pwn.college{IIBaMLBJIRYo1BdQLpKyLw17P7z.QX5EDO0wiMwAzNzEzW}`
-### Resources
-- [link](https://google.com)
 ### Notes
--
+- learnt about the `|` (_pipe_) operator, which directly _pipes_ the output of one command to the `stdin` of another

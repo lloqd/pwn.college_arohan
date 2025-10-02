@@ -1,6 +1,7 @@
 # Challenge 6: Grepping stored results
-
+Redirecting the `stdout` of a program to a file and searching through it using `grep`
 ## Solution
+Invoke `/challenge/run` and redirect its `stdout` to `/tmp/data.txt` with the `>` operator
 ```
 hacker@piping~grepping-stored-results:~$ /challenge/run > /tmp/data.txt
 [INFO] WELCOME! This challenge makes the following asks of you:
@@ -21,7 +22,7 @@ hacker@piping~grepping-stored-results:~$ /challenge/run > /tmp/data.txt
 [PASS] The file at the other end of my stdout looks okay!
 [PASS] Success! You have satisfied all execution requirements.
 ```
-
+Now, invoke `grep` to search for the flag in `/tmp/data.txt`
 ```
 hacker@piping~grepping-stored-results:~$ grep pwn.college /tmp/data.txt
 pwn.college{AX6QPYcI8iAjWoZXgw8IFqR3yV0.QX4EDO0wiMwAzNzEzW}
@@ -29,7 +30,3 @@ pwn.college{AX6QPYcI8iAjWoZXgw8IFqR3yV0.QX4EDO0wiMwAzNzEzW}
 
 ## Flag
 `pwn.college{AX6QPYcI8iAjWoZXgw8IFqR3yV0.QX4EDO0wiMwAzNzEzW}`
-### Resources
-- [link](https://google.com)
-### Notes
--

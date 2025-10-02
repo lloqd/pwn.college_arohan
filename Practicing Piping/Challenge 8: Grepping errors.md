@@ -1,9 +1,9 @@
 # Challenge 8: Grepping errors
-
+URedirecting the `stderr` of a program to `stdout` using `>&` and searching through it using `grep`
 ## Solution
-
+Invoke `/challenge/run`, redirect its `stderr` to `stdout` with `2>& 1` and _pipe_ it to `grep`
 ```
-hacker@piping~grepping-errors:~$ /challenge/run 2>&1 | grep pwn.college
+hacker@piping~grepping-errors:~$ /challenge/run 2>& 1 | grep pwn.college
 [INFO] WELCOME! This challenge makes the following asks of you:
 [INFO] - the challenge checks for a specific process at the other end of stderr : grep
 [INFO] - the challenge will output a reward file if all the tests pass : /challenge/.data.txt
@@ -24,10 +24,9 @@ hacker@piping~grepping-errors:~$ /challenge/run 2>&1 | grep pwn.college
 [PASS] Success! You have satisfied all execution requirements.
 pwn.college{4fONagDILd4KGgV4K0QjyPl66GV.QX1ATO0wiMwAzNzEzW}
 ```
-
 ## Flag
 `pwn.college{4fONagDILd4KGgV4K0QjyPl66GV.QX1ATO0wiMwAzNzEzW}`
-### Resources
-- [link](https://google.com)
 ### Notes
--
+- learnt about the `>&` operator which can redirect an _FD_ to another _FD_
+  - for example: invoking `2>& 1` redirects _FD_ 2 (`stderr`) to _FD_ 1 (`stdout`)
+-  the `|` operator can only _pipe_ through the `stdout` of a program

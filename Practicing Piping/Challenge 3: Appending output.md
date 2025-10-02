@@ -1,7 +1,7 @@
 # Challenge 3: Appending output
-
+Using `>>` to _append_ the stdout of a command to another file
 ## Solution
-Invoke `/challenge/run` and _append_ its `stdout` to `/home/hacker/the-flag` using `<<`
+Invoke `/challenge/run` and _append_ its `stdout` to `/home/hacker/the-flag` using `>>` and like the previous challenge, the output seen is sent over `stderr`
 ```
 hacker@piping~appending-output:~$ /challenge/run >> /home/hacker/the-flag
 [INFO] WELCOME! This challenge makes the following asks of you:
@@ -46,4 +46,4 @@ mode!
 ## Flag
 `pwn.college{sT8l3F4bIEv4Z-wXv06qtYb2egl.QX3ATO0wiMwAzNzEzW}`
 ### Notes
--
+- learnt about the `>>` operator, which works like `>` to redirect the output of the process to another, however unlike `>`, `>>` _appends_ the `stdout` of the first process to the file on the right rather than overwriting it like `>`
