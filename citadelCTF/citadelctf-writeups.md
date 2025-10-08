@@ -73,7 +73,7 @@ Note: round off coordinates to 3 decimal places.
 Flag format: `citadel{XX.XXX_XXX.XXX}`
 
 Image included:
-![Included image in the challenge](citadel/location.jpg)
+![Included image in the challenge](location.jpg)
 
 ## Solution:
 Based on observation of the italicized words in the challenge description and the image, we can deduce that the location is a Buddhist temple with a cemetery north of Mt. Fuji (based on the compass arrow in the bottom right).
@@ -82,23 +82,23 @@ The location also overlooks a town/settlement so it has to be elevated with resp
 
 First, we use Satellite view on Google Maps to narrow down our search to the _Narusawa_ and _Fujikawaguchiko_ regions, as they seem to be bordered by forests and have multiple temples in the area. 
 
-![Satellite view](citadel/satelliteview.jpg)
+![Satellite view](satelliteview.jpg)
 
 Next, we search for temples in the area and view them on Google Street View:
 
-![Temple search](citadel/templesearch.jpg)
+![Temple search](templesearch.jpg)
 
 Going through the temples, we eventually find the _Tsūgenji_ temple, which has a cemetery similar to the original photo 
 
-![Tsūgenji temple](citadel/tsugenji.jpg)
+![Tsūgenji temple](tsugenji.jpg)
 
 We move our street view along the road that the temple lies on and rotate our view towards the temple to find the exact location of the challenge's photo: 
 
-![Exact location of the photo](citadel/gsv.jpg)
+![Exact location of the photo](gsv.jpg)
 
 Now, we just need to get its coordinates like so and round them off for the flag, which is `citadel{35.486_138.699}`
 
-![Coordinates](citadel/final_location.jpg)
+![Coordinates](final_location.jpg)
 
 ## Flag:
 `citadel{35.486_138.699}`
@@ -111,29 +111,36 @@ It moves with a strange grace, holding out a cartridge containing a single file.
 
 You realize the file is compatible with the device you carry and may be the key to continue your ascent toward the Citadel’s heart. 
 
-[APK file included](citadel/dexquest.apk)
+[APK file included](dexquest.apk)
 
 ## Solution:
 Run the `.apk` file on an Android device to find a landing page with a cryptic description.
-![landing](citadel/landing.jpg)
 
-On swiping to the left, we find a _Shinsu Barrier_, and on trying to press the button to `enter` the _barrier_, the app closes. We can also keep trying to swipe left and get a glimpse of a room with a flag built in Minecraft, with a prompt that says `<FLAG>`, presumably the end of the challenge. ![shinsu barrier](shinsubarrier.jpg)
+![landing](landing.jpg)
+
+On swiping to the left, we find a _Shinsu Barrier_, and on trying to press the button to `enter` the _barrier_, the app closes. We can also keep trying to swipe left and get a glimpse of a room with a flag built in Minecraft, with a prompt that says `<FLAG>`, presumably the end of the challenge. 
+
+![shinsu barrier](shinsubarrier.jpg)
 
 On swiping to the right, we find a page with an observer from Minecraft and a button that says `OBSERVE THE OBSERVER` which on clicking leads to:
-![observer](citadel/observer.jpg)
+
+![observer](observer.jpg)
 
 At this point, we decompile the `.apk` file with JADX and after giving some random input to the text box, we search the source code for keywords on screen, like `Correct: 🟢 n Probably ¯\\_(ツ)_/¯` where n is a number.
 
-![random input](citadel/randominput.jpg)
+![random input](randominput.jpg)
 
 Going through the source, we find the logic behind the Sealed Observer at `sources/com/shinsu/dexquest/screens/Vault.java`
-![alt text](citadel/green.png)
+
+![alt text](green.png)
 
 We see that when `green == 99`, we get the _Shinsu Stabilizer Crystal_ and the next floor is unlocked, and that the variable `green` gets its value from the output of the `correctDigits` function when run with the user's input.
 
 The `correctDigits` function goes through the user's input digit by digit and checks whether it is a specific number or not, which we can take to another programming language and get the number from.
 
-
+Now, we enter the number on the Sealed Observer page to obtain the _Shinsu Stabilizer Crystal_, go to the _Shinzu Barrier_, and on pressing Enter Barrier, it takes us to previously seen screen with the Minecraft flag, where on pressing `<flag>`, the flag is copied to the clipboard.
+## Flag:
+`citadel{f33ls_g00d_to_n0t_g3t_d33p_fr13d}`
 
 # 4. The Sound of Music
 ## Description:
@@ -144,14 +151,14 @@ The flag is hidden in these digital footprints across music platforms and split 
 Using the challenge description, we can deduce that `tracking the music they last listened to` refers to the website [last.fm](https://last.fm) and `posting ratings of new albums` refers to [rateyourmusic](https://rateyourmusic.com).
 
 On these platforms, we look for the user `citadweller` and find two profiles:
-![lastfm](citadel/lastfm.png) ![rym](citadel/rym.png)
+![lastfm](lastfm.png) ![rym](rym.png)
 
-Scrolling down on the last.fm profile, we get pt. 1 of the flag in the user's _shoutbox_: `citadel{c0mputers_st0pped_exchang1ng_1nf0rmat10n` ![last.fm flag pt1](citadel/lfmflag.png)
+Scrolling down on the last.fm profile, we get pt. 1 of the flag in the user's _shoutbox_: `citadel{c0mputers_st0pped_exchang1ng_1nf0rmat10n` ![last.fm flag pt1](lfmflag.png)
 
 On the RYM profile, we get pt. 2: `_n_started_shar1ng_st0r1es`
  
  On the same profile, we also see a `tinyurl` link that leads to a [Spotify profile](https://open.spotify.com/user/317w4n4m2a4btks6hrqomyo3wpqu) with one [public playlist](https://open.spotify.com/playlist/37eiwS3xaRXOsg4F5RmSsY).
- Here, we find pt. 3 (`_n_then_they_were_n0where_t0_be_f0und}`)![spotify playlist](citadel/spotifyflag.png)
+ Here, we find pt. 3 (`_n_then_they_were_n0where_t0_be_f0und}`)![spotify playlist](spotifyflag.png)
 
 Combining all three parts, we get the flag.
 
@@ -164,19 +171,19 @@ Your quest continues, but you feel something odd about this room. The only artif
 
 You must take the corrupted file and repair it to reveal the true code that will unlock the door forward.
 
-[`.wav` file included](citadel/mysong.wav)
+[`.wav` file included](mysong.wav)
 ## Solution:
 On attempting to run the .wav file, it doesn't load in standard audio players, throwing the following error:
-![audio player error](citadel/audioplayererror.png)
+![audio player error](audioplayererror.png)
 
 This suggests the file is not supposed to be a `.wav` file, and reading the description carefully, we see that an italicization of _mid_, suggesting that the file might be a `.midi` file.
 
 We open the file in a hex editor to investigate further and observe that that the _magic bytes_ of the file have been changed to spell `M1D1`, further suggesting that the file is supposed to be a `.midi`. file.
 
-![hex editor](citadel/wavhex.png)
+![hex editor](wavhex.png)
 
 We change them to `MThd`, the proper header for a `.midi` file and open it in Audacity to immediately find that the `midi` sequence spells out the flag for us.
-![audacity](citadel/audacity.png)
+![audacity](audacity.png)
 
 ## Flag:
 `citadel{8lackM1D1wa5c00l}`
