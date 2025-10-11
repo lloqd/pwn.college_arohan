@@ -1,7 +1,7 @@
 # Challenge 1: Chaining with Semicolons
 
 ## Solution
-
+Invoke `/challenge/pwn` and `/challenge/college` and use a `;` to 
 ```
 hacker@chaining~chaining-with-semicolons:~$ /challenge/pwn;/challenge/college
 Yes! You chained /challenge/pwn and /challenge/college! Here is your flag:
